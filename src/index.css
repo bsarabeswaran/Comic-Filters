@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #cfe4eb;
+  background-color: #000000;
+  background-color: #2a3e55;
+  transition: background-color 0.5s;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#title{
+  min-width: 667px;
+  min-height: 15px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  
+  color: #ffffff;
+  border-bottom: 1px solid white;
+}
+
+#choose-file-type{
+  
+  
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 49vw) [col-start]);
+  justify-content: center;
+  min-width:150px;
+  width: auto !important;
+}
+
+.navigation{
+  display: flex;
+  justify-content: center;
+}
+
+.info-container{
+  
+  color: white;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 25vw) [col-start]);
+  justify-items: center;
+  min-width:150px;
+  width: auto !important;
+  min-height:50px;
+  height: 6vh;
+
+}
+
+.load-file{
+  padding: 10px;
+  grid-column: 1 / span 1;
+}
+
+.react-pdf__Page__svg{
+  
+}
+
+.page-info{
+  grid-column: 2 / span 1;
+  justify-content: center;
+  text-shadow: #000000;
+  font-size: 125%;
+}
+
+.navigation-buttons{
+  grid-column: 3 / span 1;
+  padding: 15px;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+  font-family: "Lucida Console", "Courier New", monospace;
+  border-radius: 5px;
+}
+.grow:hover { 
+  transform: scale(1.01); 
+  
+}
+.overall{
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto auto;
+}
+
+.infoAll{
+  
+}
+
+#choose-color{
+  grid-column: 4 / span 1;
+  padding: 15px;
+  justify-content: center;
+}
+
+#choose-size{
+  grid-column: 4 / span 1;
+}
+
+.page-grid{
+  padding-right: 10px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  grid-template-columns: repeat(2, minmax(400px, 50vw) [col-start]);
+}
+
+.protanopia {
+  filter: url('./filters.svg#protanopia');
+}
+
+.protanomaly {
+  filter: url('./filters.svg#protanomaly');
+}
+
+.deuteranopia {
+  filter: url('./filters.svg#deuteranopia');
+}
+
+.deuteranomaly {
+  filter: url('./filters.svg#deuteranomaly');
+}
+
+.tritanopia {
+  filter: url('./filters.svg#tritanopia');
+}
+
+.tritanomaly {
+  filter: url('./filters.svg#tritanomaly');
+}
+
+.achromatopsia {
+  filter: url('./filters.svg#achromatopsia');
+}
+
+.achromatomaly {
+  filter: url('./filters.svg#achromatomaly');
+}
