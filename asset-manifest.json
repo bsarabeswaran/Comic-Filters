@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Comic-Filters/static/css/main.13b1bd46.chunk.css",
-    "main.js": "/Comic-Filters/static/js/main.1067b1dc.chunk.js",
-    "main.js.map": "/Comic-Filters/static/js/main.1067b1dc.chunk.js.map",
+    "main.js": "/Comic-Filters/static/js/main.ddee3bf9.chunk.js",
+    "main.js.map": "/Comic-Filters/static/js/main.ddee3bf9.chunk.js.map",
     "runtime-main.js": "/Comic-Filters/static/js/runtime-main.c7ed7263.js",
     "runtime-main.js.map": "/Comic-Filters/static/js/runtime-main.c7ed7263.js.map",
-    "static/js/2.685fbe47.chunk.js": "/Comic-Filters/static/js/2.685fbe47.chunk.js",
-    "static/js/2.685fbe47.chunk.js.map": "/Comic-Filters/static/js/2.685fbe47.chunk.js.map",
+    "static/js/2.1d17bc3e.chunk.js": "/Comic-Filters/static/js/2.1d17bc3e.chunk.js",
+    "static/js/2.1d17bc3e.chunk.js.map": "/Comic-Filters/static/js/2.1d17bc3e.chunk.js.map",
     "pdf.worker.js": "/Comic-Filters/a0dab209e41b72d914e515abbb3add1d.js",
     "a0dab209e41b72d914e515abbb3add1d.js.LICENSE.txt": "/Comic-Filters/a0dab209e41b72d914e515abbb3add1d.js.LICENSE.txt",
     "index.html": "/Comic-Filters/index.html",
     "static/css/main.13b1bd46.chunk.css.map": "/Comic-Filters/static/css/main.13b1bd46.chunk.css.map",
-    "static/js/2.685fbe47.chunk.js.LICENSE.txt": "/Comic-Filters/static/js/2.685fbe47.chunk.js.LICENSE.txt",
+    "static/js/2.1d17bc3e.chunk.js.LICENSE.txt": "/Comic-Filters/static/js/2.1d17bc3e.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Comic-Filters/static/media/filters.5ac529ab.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c7ed7263.js",
-    "static/js/2.685fbe47.chunk.js",
+    "static/js/2.1d17bc3e.chunk.js",
     "static/css/main.13b1bd46.chunk.css",
-    "static/js/main.1067b1dc.chunk.js"
+    "static/js/main.ddee3bf9.chunk.js"
   ]
 }
