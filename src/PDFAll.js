@@ -158,18 +158,6 @@ const PDFViewAll = (props) => {
         });
 
         documentText += endOfDoc;
-        const useStyles = makeStyles((theme) => ({
-            root: {
-                flexGrow: 1,
-            },
-            paper: {
-                padding: theme.spacing(2),
-                textAlign: 'center',
-                color: theme.palette.text.secondary,
-            },
-        }));
-
-        const classes = useStyles();
 
 
         return (
@@ -312,6 +300,7 @@ const PDFViewAll = (props) => {
                 </div>
                 <div class="pdfBox">{pageHolder()}</div>
                 <div class="infoAll">
+                    <br></br>
                     Types of Color Blindness:
                     <ul>
                         <li>Protanopia - Complete shift of L-Cone (too little red light, too much green light)</li>

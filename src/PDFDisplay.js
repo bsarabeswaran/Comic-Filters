@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import FadeIn from 'react-fade-in';
-import { Document, Page } from 'react-pdf/dist/umd/entry.webpack';
+import { Document, Page, pdfjs } from 'react-pdf/dist/umd/entry.webpack';
+
 import SmallStyledButton from './smallButton.js'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+
+pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js';
 
 const PDFView = (props) => {
     const [numPages, setNumPages] = useState(null);
@@ -35,14 +38,31 @@ const PDFView = (props) => {
 
     function goToPrevPage() {
         setPageNumber(currPage => currPage - 1);
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var remainingHeight = 0.695 * windowHeight;
+
+        var pdfBox = document.getElementsByClassName("pdfBox")[0];
+
+        pdfBox.style.height = `${remainingHeight}px`;
     }
 
     function goToNextPage() {
         setPageNumber(currPage => currPage + 1);
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var remainingHeight = 0.695 * windowHeight;
+
+        var pdfBox = document.getElementsByClassName("pdfBox")[0];
+
+        pdfBox.style.height = `${remainingHeight}px`;
     }
 
     function FileChanged(event) {
         setFile(event.target.files[0]);
+
+        console.log(file);
+
         setPageNumber(1);
         let bodyObj = document.getElementsByTagName('body')[0];
 
@@ -154,31 +174,33 @@ const PDFView = (props) => {
                             options={{ workerSrc: "/pdf.worker.js" }}
                             onLoadSuccess={DocumentLoaded}
                         >
-                            <Page
-                                pageNumber={pageNumber}
-                                renderMode="svg"
-                                height={remainingHeight}
-                                loading=""
-                                onLoadSuccess={PageLoaded}
-                            >
-                            </Page>
-                            <Page
-                                pageNumber={pageNumber}
-                                renderMode="svg"
-                                height={remainingHeight}
-                                onLoadSuccess={PageLoadedType}
-                                loading=""
-                                className={filter}
-                            >
+                            <div class="dual-page-grid">
+                                <Page
+                                    pageNumber={pageNumber}
+                                    renderMode="svg"
+                                    height={remainingHeight}
+                                    loading=""
+                                    onLoadSuccess={PageLoaded}
+                                >
+                                </Page>
+                                <Page
+                                    pageNumber={pageNumber}
+                                    renderMode="svg"
+                                    height={remainingHeight}
+                                    onLoadSuccess={PageLoadedType}
+                                    loading=""
+                                    className={filter}
+                                >
 
-                            </Page>
-
+                                </Page>
+                            </div>
                         </Document>
                     </FadeIn>
                 </div>
 
             </FadeIn>
             <div class="info">
+                <br></br>
                 Types of Color Blindness:
                 <ul>
                     <li>Protanopia - Complete shift of L-Cone (too little red light, too much green light)</li>
@@ -190,7 +212,7 @@ const PDFView = (props) => {
                     <li>Achromatopsia - Near complete lack of color in vision</li>
                     <li>Achromatomaly - Faded colors in vision</li>
                 </ul>
-                Made by <a href="https://github.com/Indian-Jones">Sarabeswaran Balamurugan</a><br></br>
+                Made by <a href="https://github.com/Indian-Jones">Sarabeswaran Balamurugan</a><br></br><br></br>
                 Color Blind Filters (filters.svg) built by <a href="https://github.com/hail2u">hail2u</a> in <a href="https://github.com/hail2u/color-blindness-emulation">this repo</a>.
 
             </div>
