@@ -312,7 +312,7 @@ const PDFViewAll = (props) => {
                         <li>Achromatopsia - Near complete lack of color in vision</li>
                         <li>Achromatomaly - Faded colors in vision</li>
                     </ul>
-                    Made by <a href="https://github.com/bsarabeswaran">Sarabeswaran Balamurugan</a><br></br>
+                    Made by <a href="https://github.com/bsarabeswaran">Sarabeswaran Balamurugan(https://github.com/bsarabeswaran)</a><br></br>
                     Color Blind Filters (filters.svg) built by <a href="https://github.com/hail2u">hail2u</a> in <a href="https://github.com/hail2u/color-blindness-emulation">this repo</a>.
 
                 </div>
